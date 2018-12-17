@@ -1,6 +1,6 @@
 <template>
-  <div id="home">
-    <h1>HOME</h1>
+  <div id="archive">
+    <h1>ARCHIVE</h1>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 // import Foo from '@/components/Foo.vue'
 
 export default {
-  name: 'home',
+  name: 'archive',
   // components: { Foo }
   data () {
     return {}
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style scoped>
-#home {
+#archive {
   color: 'rose';
 }
 </style>

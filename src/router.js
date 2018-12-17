@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import Article from './views/Article.vue'
+import Archive from './views/Archive.vue'
+import Profile from './views/Profile.vue'
 
 Vue.use(Router)
 
@@ -15,12 +18,48 @@ export function createRouter () {
         component: Home
       },
       {
-        path: '/about',
-        name: 'about',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+        path: '/a/',
+        name: 'article',
+        component: Article,
+        children: [
+          {
+            path: 'create',
+            name: 'create-article',
+            component: () => import(/* webpackChunkName: "article_edit" */ './components/ArticleEdit.vue')
+          },
+          {
+            path: ':slug/edit',
+            name: 'edit-article',
+            component: () => import(/* webpackChunkName: "article_edit" */ './components/ArticleEdit.vue')
+          },
+          {
+            path: ':slug',
+            name: 'view-article',
+            component: () => import(/* webpackChunkName: "article_view" */ './components/ArticleView.vue')
+          }
+        ]
+      },
+      {
+        path: '/u/',
+        name: 'profile',
+        component: Profile,
+        children: [
+          {
+            path: ':id/edit',
+            name: 'profile-edit',
+            component: () => import(/* webpackChunkName: "profile_edit" */ './components/ProfileEdit.vue')
+          },
+          {
+            path: ':id',
+            name: 'profile-view',
+            component: () => import(/* webpackChunkName: "profile_view" */ './components/ProfileView.vue')
+          }
+        ]
+      },
+      {
+        path: '/archive',
+        name: 'archive',
+        component: Archive
       }
     ]
   })
