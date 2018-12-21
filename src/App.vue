@@ -28,13 +28,6 @@ export default {
 
 <style src="@/assets/base.css" />
 <style>
-:root {
-  --menu-width: 300px;
-  --header-height: 6rem;
-  --highlight-color: #8BC51C;
-  --page-max-width: 1280px;
-}
-
 #app {
   display: block;
   width: 100vw;

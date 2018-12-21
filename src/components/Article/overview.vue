@@ -3,6 +3,7 @@
     <header>
       <h1>{{ title }}</h1>
       <small class="created-at" :title="lastUpdate">{{ createdAt | humanReadableDate }}</small>
+      <p>{{ description }}</p>
     </header>
   </section>
 </template>

@@ -26,7 +26,7 @@ nav {
   width: calc(var(--menu-width) - 1em);
   height: 100vh;
   padding: 4em 0 0 1em;
-  background: #333;
+  background: var(--menu-background-color);
   z-index: 1;
   transform: translateX(calc(var(--menu-width) * -1));
   transition: transform .2s ease;
@@ -36,21 +36,20 @@ nav.visible {
 }
 
 a {
-  display: inline-block;
-  width: 110px;
-  height: 110px;
-  margin: 5px;
-  line-height: 110px;
-  color: #333;
+  display: block;
+  width: 90%;
+  height: 2em;
+  line-height: 2em;
+  color: var(--menu-item-foreground-color);
   font-weight: bold;
   text-align: center;
   text-decoration: none;
-  background: #baa;
-  border: 5px solid #999;
+  background: var(--menu-item-background-color);
+  border: 5px solid var(--menu-item-background-color);
 }
 a.router-link-exact-active {
   color: black;
-  border: 5px solid #595;
+  border: 5px solid var(--highlight-color);
 }
 .toggle {
   position: absolute;
@@ -67,7 +66,7 @@ a.router-link-exact-active {
   transform: translate(4.5em);
 }
 .toggle > .burger-bar {
-  background: #595;
+  background: var(--highlight-color);
   flex: 0 0 auto;
   width: 100%;
   height: 20%;

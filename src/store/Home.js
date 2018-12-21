@@ -1,6 +1,10 @@
-import { fetchRecentArticles, fetchTags } from '@/api'
+import { fetchConfiguration, fetchRecentArticles, fetchTags } from '@/api'
 
 const state = {
+  title: '',
+  description: '',
+  multiUser: false,
+  configLoading: false,
   articlesLoading: false,
   tagsLoading: false,
   articles: [],
@@ -8,21 +12,35 @@ const state = {
 }
 
 const mutations = {
+  setConfigLoading (state, loadingState) {
+    state.configLoading = !!loadingState
+  },
   setArticlesLoading (state, loadingState) {
-    state.articlesLoading = loadingState
+    state.articlesLoading = !!loadingState
   },
   setTagsLoading (state, loadingState) {
-    state.tagsLoading = loadingState
+    state.tagsLoading = !!loadingState
   },
-  setArticles (state, { articles, articlesCount }) {
+  setConfig (state, { title, description, multiUser }) {
+    state.title = title
+    state.description = description
+    state.multiUser = !!multiUser
+  },
+  setArticles (state, articles) {
     state.articles = articles
   },
-  setTags (state, { tags }) {
+  setTags (state, tags) {
     state.tags = tags
   }
 }
 
 const actions = {
+  async fetchConfiguration ({ commit }) {
+    commit('setConfigLoading', true)
+    const configData = await fetchConfiguration()
+    commit('setConfig', configData)
+    commit('setConfigLoading', false)
+  },
   async fetchRecentArticles ({ commit }) {
     commit('setArticlesLoading', true)
     const articleData = await fetchRecentArticles()

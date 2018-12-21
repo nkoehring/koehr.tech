@@ -1,3 +1,18 @@
+:root {
+  --menu-width: 300px;
+  --header-height: 6rem;
+  --page-max-width: 1280px;
+  --highlight-color: #595;
+  --background-color: #29282A;
+  --foreground-color: #EFE5D3;
+  --box-shadow-shift: 2px;
+  --box-shadow-strength: 5px;
+  --box-shadow-color: black;
+  --menu-background-color: #333;
+  --menu-item-background-color: #baa;
+  --menu-item-foreground-color: #333;
+}
+
 @font-face {
   font-family: Rubik;
   src: local('Rubik Light'), local('Rubik-Light'), url('./fonts/rubik-light.woff2') format('woff2'), url('./fonts/rubik-light.woff') format('woff');
@@ -13,12 +28,12 @@ html, body {
   font-size: 10px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #29282A;
+  background-color: var(--background-color);
   overflow-x: hidden;
 }
 
 #app {
-  color: #EFE5D3;
+  color: var(--foreground-color);
   font-size: 1.6rem;
 }
 
@@ -63,6 +78,12 @@ blockquote {
   /* text-align: center; */
   color: #BBB;
   padding: 0 0 0 5rem;
+}
+
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 code {

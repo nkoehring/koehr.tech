@@ -1,6 +1,7 @@
 import { ajax } from 'nanoajax'
 
 const BASE_URL = '/testdata' // TODO
+const CONFIG_URL = `${BASE_URL}/config`
 const ARTICLES_URL = `${BASE_URL}/articles`
 const TAGS_URL = `${BASE_URL}/tags`
 const PROFILES_URL = `${BASE_URL}/profiles`
@@ -27,6 +28,9 @@ function callAPI (url, method = 'GET', payload = null) {
   })
 }
 
+export function fetchConfiguration () {
+  return callAPI(`${CONFIG_URL}.json`)
+}
 export function fetchRecentArticles () {
   return callAPI(`${ARTICLES_URL}.json`)
 }
