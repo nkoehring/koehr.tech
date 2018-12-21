@@ -1,0 +1,16 @@
+[
+  {
+    "author": {
+      "id": "e633bc4d",
+      "username": "Foo Bert",
+      "bio": "My name is Bert. Foo Bert.",
+      "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+      "following": false,
+      "follows": false
+    },
+    "createdAt": 1545081548000,
+    "body": "Because I'm cool I comment my own stuff.",
+    "favorited": true,
+    "favoritesCount": 1
+  }
+]

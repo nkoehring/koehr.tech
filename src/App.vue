@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :class="{ 'with-menu': navVisible }">
+  <div id="app">
     <main-menu :visible.sync="navVisible" />
     <div class="content">
       <router-view />
@@ -26,38 +26,28 @@ export default {
 }
 </script>
 
+<style src="@/assets/base.css" />
 <style>
 :root {
   --menu-width: 300px;
-  --header-height: 4rem;
+  --header-height: 6rem;
   --highlight-color: #8BC51C;
   --page-max-width: 1280px;
 }
 
-html,body {
-  margin: 0;
-  padding: 0;
-  background-color: #333;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 10px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 #app {
-  display: flex;
-  color: #EEE0E0;
+  display: block;
+  width: 100vw;
   font-size: 1.6rem;
-  transform: translateX(calc(var(--menu-width) * -1));
-  transition: transform .2s ease;
-}
-#app.with-menu {
-  transform: translateX(0px);
 }
 #app > .content {
-  width: calc(100vw - var(--menu-width));
-  margin-top: var(--header-height);
-  margin-left: 10rem;
-  padding: 1em;
-  vertical-align: top;
+  max-width: 70rem;
+  width: calc(100% - 6em);
+  margin: var(--header-height) auto;
+}
+@media (max-width: 580px) {
+  #app > .content {
+    width: calc(100% - 2em);
+  }
 }
 </style>

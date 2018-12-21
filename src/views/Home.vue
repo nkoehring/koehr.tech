@@ -1,23 +1,35 @@
 <template>
-  <div id="home">
-    <h1>HOME</h1>
+  <div id="home" v-once>
+    <h1>Welcome</h1>
+    <ol>
+      <li :key="article.slug" v-for="article in articles">
+        <article-overview v-bind="article" />
+      </li>
+    </ol>
   </div>
 </template>
 
 <script>
-// import Foo from '@/components/Foo.vue'
+import ArticleOverview from '@/components/Article/overview'
+import articles from '@/testdata/articles.json'
 
 export default {
   name: 'home',
-  // components: { Foo }
+  components: { ArticleOverview },
   data () {
-    return {}
+    return { articles }
   }
 }
 </script>
 
 <style scoped>
 #home {
-  color: 'rose';
+  display: block;
+  max-width: 96rem;
+  width: 100%;
+  margin: auto;
+}
+ol {
+  list-style: none;
 }
 </style>

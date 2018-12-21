@@ -21,13 +21,18 @@ export default {
 
 <style scoped>
 nav {
-  position: relative;
-  flex: 0 0 auto;
+  position: fixed;
+  top: 0;
   width: calc(var(--menu-width) - 1em);
-  height: calc(100vh - 4em);
+  height: 100vh;
   padding: 4em 0 0 1em;
   background: #333;
   z-index: 1;
+  transform: translateX(calc(var(--menu-width) * -1));
+  transition: transform .2s ease;
+}
+nav.visible {
+  transform: translateX(0);
 }
 
 a {

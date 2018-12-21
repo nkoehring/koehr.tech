@@ -1,0 +1,20 @@
+{
+  "author": {
+    "id": "6de1e836",
+    "username": "koehr",
+    "bio": "Programmer, OpenSource enthusiast and hacker based in Berlin, Germany.",
+    "image": "https://log.koehr.in/file/96b767bed9a8e472a70e1ddf0f6c5070/thumb.jpg",
+    "following": false,
+    "follows": false
+  },
+  "title": "Vuejs Reactivity from Scratch",
+  "description": "One of the more exciting features of Vuejs is the seemingly magic reactivity. Plain data objects in components magically invoke a rerender when a property changes. But we all know there is no fairydust involved, right? So how does it actually work?",
+  "slug": "vuejs-reactivity-from-scratch",
+  "body": "Vuejs is the star newcomer in the Javascript Framework world. People love how it makes complicated things very simple yet performant. One of the more exciting features is its seemingly magic reactivity. Plain data objects in components magically invoke a rerender when a property changes. But we all know there is no fairydust involved, right? So how does it actually work?\n## The Magic Of Getters And Setters\nWith the ES5 standard JavaScript got lots of exciting new features. Some of them highly underrated and underused in my opinion. Getters and setters are an example. If you never heard of them, I would recommend you to read John Riesigs piece on them.\n\nAs soon as you know what getters and setters are: functions transparently called on every property access, you might already know where this goes. Boom! All the fairydust suddenly disappears...",
+  "createdAt": 1502985600000,
+  "updatedAt": null,
+  "tagList": ["vuejs", "reactivity"],
+  "category": "web-development",
+  "favorited": true,
+  "favoritesCount": 13
+}

@@ -1,0 +1,20 @@
+{
+  "author": {
+    "id": "e633bc4d",
+    "username": "Foo Bert",
+    "bio": "My name is Bert. Foo Bert.",
+    "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+    "following": false,
+    "follows": false
+  },
+  "title": "My one and only love",
+  "description": "This is about the love of my life: Quux!",
+  "slug": "hello-world-and-such",
+  "body": "I think, the best thing in the world is a nice cold can of Quux!\n\nI **love** Quux. It is so incredibly awesome.",
+  "createdAt": 1545081548000,
+  "updatedAt": 1545081549000,
+  "tagList": ["foo", "love"],
+  "category": "quux",
+  "favorited": false,
+  "favoritesCount": 23
+}

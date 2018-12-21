@@ -1,0 +1,59 @@
+[
+  {
+    "author": {
+      "id": "e633bc4d",
+      "username": "Foo Bert",
+      "bio": "My name is Bert. Foo Bert.",
+      "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+      "following": false,
+      "follows": false
+    },
+    "title": "My one and only love",
+    "description": "This is about the love of my life: Quux!",
+    "slug": "hello-world-and-such",
+    "createdAt": 1545081548000,
+    "updatedAt": 1545081549000,
+    "tagList": ["foo", "love"],
+    "category": "quux",
+    "favorited": false,
+    "favoritesCount": 23
+  },
+  {
+    "author": {
+      "id": "ffb3cfb3",
+      "username": "Apostle Zarathud",
+      "bio": "Someone who knows their shit",
+      "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+      "following": true,
+      "follows": false
+    },
+    "title": "The Five Commandments",
+    "description": "The holy pentabarf of Discord",
+    "slug": "pentabarf",
+    "createdAt": 1545150893384,
+    "updatedAt": null,
+    "tagList": ["love", "discord"],
+    "category": "religion",
+    "favorited": true,
+    "favoritesCount": 23425
+  },
+  {
+    "author": {
+      "id": "6de1e836",
+      "username": "koehr",
+      "bio": "Programmer, OpenSource enthusiast and hacker based in Berlin, Germany.",
+      "image": "https://log.koehr.in/file/96b767bed9a8e472a70e1ddf0f6c5070/thumb.jpg",
+      "following": false,
+      "follows": false
+    },
+    "title": "Vuejs Reactivity from Scratch",
+    "description": "One of the more exciting features of Vuejs is the seemingly magic reactivity. Plain data objects in components magically invoke a rerender when a property changes. But we all know there is no fairydust involved, right? So how does it actually work?",
+    "slug": "vuejs-reactivity-from-scratch",
+    "createdAt": 1502985600000,
+    "updatedAt": null,
+    "tagList": ["vuejs", "reactivity"],
+    "category": "web-development",
+    "favorited": true,
+    "favoritesCount": 13
+  }
+]

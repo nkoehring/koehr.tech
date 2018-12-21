@@ -1,0 +1,93 @@
+@font-face {
+  font-family: Rubik;
+  src: local('Rubik Light'), local('Rubik-Light'), url('./fonts/rubik-light.woff2') format('woff2'), url('./fonts/rubik-light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  font-family: Rubik, Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #29282A;
+  overflow-x: hidden;
+}
+
+#app {
+  color: #EFE5D3;
+  font-size: 1.6rem;
+}
+
+h1, h2, p, i, a, .first-letter, .authorName a {
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-size: 4.8rem;
+  text-align: left;
+  margin-bottom: 0.8rem;
+}
+
+h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  padding: 0;
+  margin: 5.6rem 0 -1.3rem -0.1883rem;
+  text-align: left;
+  line-height: 3.45rem;
+  letter-spacing: -0.45px;
+}
+
+a, p, i {
+  margin-top: 1em;
+  font-size: 2.1rem;
+  letter-spacing: -0.03px;
+  line-height: 1.58;
+}
+
+a {
+  text-decoration: underline;
+}
+
+blockquote {
+  font-size: 3.0rem;
+  font-style: italic;
+  letter-spacing: -0.36px;
+  line-height: 4.44rem;
+  overflow-wrap: break-word;
+  margin: 5.5rem 0 3.3rem 0;
+  /* text-align: center; */
+  color: #BBB;
+  padding: 0 0 0 5rem;
+}
+
+code {
+  font-size: 18px;
+  border-radius: 2px;
+  padding: 3px 5px;
+}
+
+mark, .highlighted {
+  background: #7DFFB3;
+}
+
+.first-letter {
+  overflow-wrap: break-word;
+  font-size: 6rem;
+  line-height: 1em;
+  display: block;
+  position: relative;
+  float: left;
+  margin: 0px 0.7rem 0 -0.5rem;
+}
+
+.subtitle {
+  color: #C9C9C9;
+  margin: 0 0 2.4rem 0;
+}
+
+::selection{background-color: lavender}

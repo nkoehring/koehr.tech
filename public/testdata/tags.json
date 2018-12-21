@@ -1,0 +1,7 @@
+[
+  { "tag": "foo", "count": 1 },
+  { "tag": "love", "count": 2 },
+  { "tag": "discord", "count": 1 },
+  { "tag": "vuejs", "count": 1 },
+  { "tag": "reactivity", "count": 1 }
+]
