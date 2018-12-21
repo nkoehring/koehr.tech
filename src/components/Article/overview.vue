@@ -1,7 +1,7 @@
 <template>
   <section name="article-overview" class="article-overview">
     <header>
-      <h1>{{ title }}</h1>
+      <h2>{{ title }}</h2>
       <small class="created-at" :title="lastUpdate">{{ createdAt | humanReadableDate }}</small>
       <p>{{ description }}</p>
     </header>

@@ -9,7 +9,9 @@
     <div v-if="articlesLoading">loading recent articles...</div>
     <ol v-else class="articles-list">
       <li :key="article.slug" v-for="article in articles">
-        <article-overview v-bind="article" />
+        <router-link :to="{name: 'view-article', params: {slug: article.slug}}">
+          <article-overview v-bind="article" />
+        </router-link>
       </li>
     </ol>
   </div>
@@ -55,15 +57,18 @@ export default {
   padding: 1rem;
   border-left: .4rem solid transparent;
   box-shadow: var(--box-shadow-shift) var(--box-shadow-shift) var(--box-shadow-strength) var(--box-shadow-color);
+  cursor: pointer;
+}
+#home ol.articles-list > li > a {
+  color: inherit;
 }
 
 #home ol.articles-list > li:hover {
   border-left-color: var(--highlight-color);
 }
 
-.article-overview header > h1 {
-  font-size: 3.6rem;
-  margin: 0;
+.article-overview header > h2 {
+  margin-top: 1em;
 }
 @media (max-width: 580px) {
   #home > header {

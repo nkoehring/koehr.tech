@@ -65,7 +65,7 @@ a, p, i {
 }
 
 a {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 blockquote {
