@@ -1,17 +1,18 @@
 const monthName = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 const oneDayInMs = 24 * 60 * 60 * 1000
 
-function dateFilter (value) {
+export function dateFilter (value) {
   if (!value) return
 
   const d = new Date(value)
   return d.toLocaleDateString()
 }
 
-function humanReadableDateFilter (value) {
+export function humanReadableDateFilter (value) {
   if (!value) return
 
-  const diff = new Date().getTime() - value
+  const now = new Date()
+  const diff = now.getTime() - value
 
   if (diff < oneDayInMs) return 'today'
   if (diff < 2 * oneDayInMs) return 'yesterday'
@@ -19,7 +20,9 @@ function humanReadableDateFilter (value) {
   const d = new Date(value)
   const month = monthName[d.getMonth()]
   const day = d.getDate()
-  return `${month} ${day}`
+  const year = d.getFullYear()
+  const yearString = year !== now.getFullYear() ? year : ''
+  return `${month} ${day} ${yearString}`
 }
 
 export default {
